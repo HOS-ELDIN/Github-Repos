@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "cairo";
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: #aaa;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+.head {
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff5722;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.head * {
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  text-transform: capitalize;
+  font-size: 18px;
+
+}
+
+.head button{
+  cursor: pointer;
+  background-color: white;
+  color: #444;
+  font-weight: bold;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+.head button:hover {
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  /* color: white; */
+}
+
+.show-data {
+  background-color: #ff5722;
+  padding: 20px;
+  color: white;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.repo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: #ff5722;
+  padding: 10px 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.repo .left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 10px;
+  font-weight: 600;
+  color: #444;
+}
+
+.repo > a {
+  background-color: #ff5722;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 100vh;
+  -webkit-border-radius: 100vh;
+  -moz-border-radius: 100vh;
+  -ms-border-radius: 100vh;
+  -o-border-radius: 100vh;
+  outline: 2px solid white;
+  outline-offset: -5px;
+}
+
+.repo .left span span {
+  color: #ff5722;
+}
+.repo .left span a {
+  color: #ff5722;
+}
