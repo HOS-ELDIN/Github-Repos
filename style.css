@@ -75,7 +75,7 @@ body {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  
+
 }
 
 .repo {
@@ -133,4 +133,16 @@ body {
     gap: 10px;
   }
 
+  }
+
+  .start {
+    font-size: 22px;
+    background-color: white;
+    padding: 20px;
+    color: #ff5722;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
   }
