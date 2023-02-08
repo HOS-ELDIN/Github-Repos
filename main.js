@@ -5,7 +5,7 @@ let showData = document.querySelector(".show-data");
 // userName.defaultValue = "HOS-ELDIN"
 
 getRepo.addEventListener("click", () => {
-  showData.children.item(0).remove()
+  showData.innerHTML = "";
   if (userName.value == "") {
     userName.defaultValue = "HOS-ELDIN";
   }
@@ -21,35 +21,42 @@ getRepo.addEventListener("click", () => {
 });
 
 function createRepo(repos, i) {
+  // define the main profile repo
   let repo = document.createElement("div");
-  repo.className = "repo";
-
+  let deployment = document.createElement("a");
   let left = document.createElement("div");
+  let title = document.createElement("span");
+  let tilteSpan = document.createElement("span");
+  let link = document.createElement("span");
+  let hubLink = document.createElement("a");
+  repo.className = "repo";
   left.className = "left";
 
-  let deployment = document.createElement("a");
-  deployment.href = `https://hos-eldin.github.io/${repos[i].name}`;
-  deployment.target = "_blank";
-  deployment.appendChild(document.createTextNode("open"));
+  if (repos[i].name !== repos[i].owner.login) {
+    repo.style.order = 1;
 
-  let title = document.createElement("span");
-  title.innerHTML = "title: ";
+    deployment.href = `https://${repos[i].owner.login}.github.io/${repos[i].name}`;
+    deployment.target = "_blank";
+    deployment.appendChild(document.createTextNode("Preview"));
 
-  let tilteSpan = document.createElement("span");
+    title.innerHTML = "Title: ";
+
+    link.innerHTML = "Gethub Link: ";
+    hubLink.className = "hub-link";
+    hubLink.href = `${repos[i].html_url}`;
+    hubLink.target = "_blank";
+    hubLink.innerHTML = `${repos[i].html_url}`;
+    left.appendChild(title);
+    left.appendChild(link);
+  } else {
+    repo.style.order = 0;
+    repo.classList.add("main-profile");
+    left.appendChild(title);
+    deployment.style.display = "none";
+  }
+
   tilteSpan.className = "title";
   tilteSpan.innerHTML = `${repos[i].name}`;
-
-  let link = document.createElement("span");
-  link.innerHTML = "gethub link: ";
-
-  let hubLink = document.createElement("a");
-  hubLink.className = "hub-link";
-  hubLink.href = `${repos[i].html_url}`;
-  hubLink.target = "_blank";
-  hubLink.innerHTML = `${repos[i].html_url}`;
-
-  left.appendChild(title);
-  left.appendChild(link);
 
   title.appendChild(tilteSpan);
   link.appendChild(hubLink);
