@@ -1,163 +1,186 @@
+:root {
+	--Very-dark-blue: #0f1424;
+	--Soft-blue: #56c2e6;
+
+	--main-color: #1d2c67;
+
+	--tw-gradient-to: hsl(335, 100%, 65%);
+	--tw-gradient-from: hsl(6, 100%, 80%);
+}
+
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 body {
-  font-family: "cairo";
-  margin: 0;
+	font-family: "cairo";
+	margin: 0;
+	background-color: var(--Very-dark-blue);
 }
 
 .container {
-  text-align: center;
-  background-color: #aaa;
-  padding-top: 20px;
-  padding-bottom: 20px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .head {
-  padding: 20px;
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-  background-color: #ff5722;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+	padding: 20px;
+	display: flex;
+	gap: 30px;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	/* background-color: var(--main-color); */
+	border: 4px solid var(--main-color);
 }
 
 .head * {
-  outline: none;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-  text-transform: capitalize;
-  font-size: 18px;
+	outline: none;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	text-transform: capitalize;
+	font-size: 18px;
 }
 .head input {
-  width: 400px;
-  max-width: 100%;
+	width: 400px;
+	max-width: 100%;
 }
 
 .head button {
-  cursor: pointer;
-  background-color: white;
-  color: #444;
-  font-weight: bold;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
+	cursor: pointer;
+
+	background: linear-gradient(
+		to right,
+		var(--tw-gradient-from),
+		var(--tw-gradient-to)
+	);
+	color: #1d2c67;
+
+	font-weight: bold;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
 }
 .head button:hover {
-  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
-  /* color: white; */
+	background: var(--main-color);
+	color: var(--tw-gradient-from);
 }
 
 .show-data {
-  background-color: #ff5722;
-  padding: 20px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+	padding: 20px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
 }
 
 .repo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  color: #ff5722;
-  padding: 20px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--main-color);
+
+	color: var(--main-color);
+	padding: 20px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
 }
 
 .repo .left {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  gap: 10px;
-  font-weight: 600;
-  color: #444;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	gap: 10px;
+	color: var(--tw-gradient-from);
 }
 .main-profile {
-  background-color: #222;
-  outline: 3px solid #ff5722;
-  outline-offset: -10px;
-  border: 3px solid white;
+	border: 2px solid var(--tw-gradient-from);
+	outline: 2px solid var(--tw-gradient-from);
+	outline-offset: -8px;
 }
 .main-profile .left {
-  align-items: center;
-  flex: 1;
-  gap: 15px;
+	align-items: center;
+	flex: 1;
+	gap: 15px;
 }
 .repo.main-profile .left span * {
-  color: #ff5722;
-  letter-spacing: 2px;
-  font-size: 22px;
+	color: var(--tw-gradient-from);
+	letter-spacing: 2px;
+	font-size: 22px;
+	font-weight: 700;
 }
 
 .repo > a {
-  background-color: #ff5722;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 100vh;
-  -webkit-border-radius: 100vh;
-  -moz-border-radius: 100vh;
-  -ms-border-radius: 100vh;
-  -o-border-radius: 100vh;
-  outline: 2px solid white;
-  outline-offset: -5px;
+	background: linear-gradient(
+		to right,
+		var(--tw-gradient-from),
+		var(--tw-gradient-to)
+	);
+	color: var(--main-color);
+	padding: 10px 15px;
+	border-radius: 100vh;
+	-webkit-border-radius: 100vh;
+	-moz-border-radius: 100vh;
+	-ms-border-radius: 100vh;
+	-o-border-radius: 100vh;
+	outline: 2px solid var(--main-color);
+	outline-offset: -5px;
+	border: 1px solid var(--main-color);
 }
 
 .repo .left span * {
-  color: #ff5722;
+	color: var(--Soft-blue);
 }
 
 @media ((max-width: 767px)) {
-  .head {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .head input {
-    width: 100%;
-  }
-  .head * {
-    width: 100%;
-    text-align: center;
-  }
-  .repo {
-    /* flex-direction: column; */
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+	.head {
+		flex-direction: column;
+		gap: 10px;
+	}
+	.head input {
+		width: 100%;
+	}
+	.head * {
+		width: 100%;
+		text-align: center;
+	}
+	.repo {
+		/* flex-direction: column; */
+		flex-wrap: wrap;
+		gap: 10px;
+	}
 }
 
 .start {
-  font-size: 22px;
-  background-color: white;
-  padding: 20px;
-  color: #ff5722;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+	font-size: 22px;
+	padding: 20px;
+	color: var(--tw-gradient-from);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+  border: 2px solid var(--tw-gradient-from);
+	outline: 2px solid var(--tw-gradient-from);
+	outline-offset: -8px;
 }
